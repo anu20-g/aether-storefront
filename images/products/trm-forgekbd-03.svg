@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="50%" stop-color="#0f0f11" />
+      <stop offset="100%" stop-color="#050506" />
+    </linearGradient>
+    <radialGradient id="amberGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="caseGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#27272a" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <linearGradient id="keyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3f3f46" />
+      <stop offset="100%" stop-color="#18181b" />
+    </linearGradient>
+    <linearGradient id="brassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="50%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad3)" />
+  <circle cx="400" cy="300" r="280" fill="url(#amberGlow)" />
+
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+  </g>
+
+  <!-- Keyboard Perspective / Chassis -->
+  <g filter="url(#shadow3)">
+    <!-- Main CNC Machined Aluminum Frame -->
+    <rect x="120" y="160" width="560" height="280" rx="16" fill="url(#caseGrad)" stroke="#52525b" stroke-width="3" />
+    <!-- Inner Gasket-Mount Plate Recess -->
+    <rect x="134" y="174" width="532" height="252" rx="10" fill="#09090b" stroke="#27272a" stroke-width="2" />
+
+    <!-- Rotary Encoder Brass Knob (Top Right) -->
+    <circle cx="636" cy="204" r="16" fill="url(#brassGrad)" stroke="#78350f" stroke-width="2" />
+    <circle cx="636" cy="204" r="12" fill="#d97706" stroke="#fde047" stroke-width="1" />
+    <line x1="636" y1="192" x2="636" y2="200" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+
+    <!-- Keyboard Key Rows -->
+    <!-- Row 1: Function Keys -->
+    <!-- Esc (Accent Amber) -->
+    <rect x="146" y="188" width="30" height="26" rx="4" fill="#d97706" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="161" y="205" font-family="monospace" font-size="10" font-weight="bold" fill="#ffffff" text-anchor="middle">ESC</text>
+
+    <!-- F-Keys -->
+    <rect x="184" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="216" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="248" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="280" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+
+    <rect x="320" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="352" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="384" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="416" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+
+    <rect x="456" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="488" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="520" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="552" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+    <rect x="590" y="188" width="28" height="26" rx="4" fill="url(#keyGrad)" stroke="#52525b" stroke-width="1" />
+
+    <!-- Row 2: Numbers -->
+    <g fill="url(#keyGrad)" stroke="#52525b" stroke-width="1">
+      <rect x="146" y="222" width="30" height="32" rx="4" />
+      <rect x="180" y="222" width="30" height="32" rx="4" />
+      <rect x="214" y="222" width="30" height="32" rx="4" />
+      <rect x="248" y="222" width="30" height="32" rx="4" />
+      <rect x="282" y="222" width="30" height="32" rx="4" />
+      <rect x="316" y="222" width="30" height="32" rx="4" />
+      <rect x="350" y="222" width="30" height="32" rx="4" />
+      <rect x="384" y="222" width="30" height="32" rx="4" />
+      <rect x="418" y="222" width="30" height="32" rx="4" />
+      <rect x="452" y="222" width="30" height="32" rx="4" />
+      <rect x="486" y="222" width="30" height="32" rx="4" />
+      <rect x="520" y="222" width="30" height="32" rx="4" />
+      <rect x="554" y="222" width="30" height="32" rx="4" />
+      <rect x="588" y="222" width="46" height="32" rx="4" fill="#27272a" />
+      <rect x="638" y="222" width="28" height="32" rx="4" />
+    </g>
+
+    <!-- Row 3: QWERTY -->
+    <g fill="url(#keyGrad)" stroke="#52525b" stroke-width="1">
+      <rect x="146" y="260" width="42" height="32" rx="4" fill="#27272a" />
+      <rect x="192" y="260" width="30" height="32" rx="4" />
+      <rect x="226" y="260" width="30" height="32" rx="4" />
+      <rect x="260" y="260" width="30" height="32" rx="4" />
+      <rect x="294" y="260" width="30" height="32" rx="4" />
+      <rect x="328" y="260" width="30" height="32" rx="4" />
+      <rect x="362" y="260" width="30" height="32" rx="4" />
+      <rect x="396" y="260" width="30" height="32" rx="4" />
+      <rect x="430" y="260" width="30" height="32" rx="4" />
+      <rect x="464" y="260" width="30" height="32" rx="4" />
+      <rect x="498" y="260" width="30" height="32" rx="4" />
+      <rect x="532" y="260" width="30" height="32" rx="4" />
+      <rect x="566" y="260" width="30" height="32" rx="4" />
+      <rect x="600" y="260" width="34" height="32" rx="4" fill="#27272a" />
+      <rect x="638" y="260" width="28" height="32" rx="4" />
+    </g>
+
+    <!-- Row 4: ASDFGH + Enter -->
+    <g fill="url(#keyGrad)" stroke="#52525b" stroke-width="1">
+      <rect x="146" y="298" width="50" height="32" rx="4" fill="#27272a" />
+      <rect x="200" y="298" width="30" height="32" rx="4" />
+      <rect x="234" y="298" width="30" height="32" rx="4" />
+      <rect x="268" y="298" width="30" height="32" rx="4" />
+      <rect x="302" y="298" width="30" height="32" rx="4" />
+      <rect x="336" y="298" width="30" height="32" rx="4" />
+      <rect x="370" y="298" width="30" height="32" rx="4" />
+      <rect x="404" y="298" width="30" height="32" rx="4" />
+      <rect x="438" y="298" width="30" height="32" rx="4" />
+      <rect x="472" y="298" width="30" height="32" rx="4" />
+      <rect x="506" y="298" width="30" height="32" rx="4" />
+      <rect x="540" y="298" width="30" height="32" rx="4" />
+      <!-- ENTER (Accent Amber) -->
+      <rect x="574" y="298" width="60" height="32" rx="4" fill="#d97706" stroke="#f59e0b" stroke-width="1.5" />
+      <rect x="638" y="298" width="28" height="32" rx="4" />
+    </g>
+
+    <!-- Row 5: Shift & ZXC -->
+    <g fill="url(#keyGrad)" stroke="#52525b" stroke-width="1">
+      <rect x="146" y="336" width="66" height="32" rx="4" fill="#27272a" />
+      <rect x="216" y="336" width="30" height="32" rx="4" />
+      <rect x="250" y="336" width="30" height="32" rx="4" />
+      <rect x="284" y="336" width="30" height="32" rx="4" />
+      <rect x="318" y="336" width="30" height="32" rx="4" />
+      <rect x="352" y="336" width="30" height="32" rx="4" />
+      <rect x="386" y="336" width="30" height="32" rx="4" />
+      <rect x="420" y="336" width="30" height="32" rx="4" />
+      <rect x="454" y="336" width="30" height="32" rx="4" />
+      <rect x="488" y="336" width="30" height="32" rx="4" />
+      <rect x="522" y="336" width="30" height="32" rx="4" />
+      <rect x="556" y="336" width="50" height="32" rx="4" fill="#27272a" />
+      <!-- Up Arrow -->
+      <rect x="610" y="336" width="26" height="32" rx="4" />
+      <rect x="640" y="336" width="26" height="32" rx="4" />
+    </g>
+
+    <!-- Row 6: Spacebar & Modifiers -->
+    <g fill="url(#keyGrad)" stroke="#52525b" stroke-width="1">
+      <rect x="146" y="374" width="40" height="34" rx="4" fill="#27272a" />
+      <rect x="190" y="374" width="36" height="34" rx="4" fill="#27272a" />
+      <rect x="230" y="374" width="40" height="34" rx="4" fill="#27272a" />
+      <!-- Spacebar -->
+      <rect x="274" y="374" width="220" height="34" rx="5" fill="#3f3f46" stroke="#71717a" stroke-width="1.5" />
+      <rect x="498" y="374" width="40" height="34" rx="4" fill="#27272a" />
+      <!-- Left, Down, Right Arrows -->
+      <rect x="580" y="374" width="26" height="34" rx="4" />
+      <rect x="610" y="374" width="26" height="34" rx="4" />
+      <rect x="640" y="374" width="26" height="34" rx="4" />
+    </g>
+  </g>
+
+  <!-- Technical Spec Labels -->
+  <g font-family="monospace" font-size="11" fill="#71717a" letter-spacing="1.5">
+    <text x="40" y="550">AETHER // CPT-003</text>
+    <text x="40" y="570">75% GASKET-MOUNT &#183; CNC ALUMINUM</text>
+    <text x="610" y="550" text-anchor="end">FORGE MECH</text>
+    <text x="610" y="570" text-anchor="end" fill="#f59e0b">HOT-SWAP LINEAR &#183; BRASS ENCODER</text>
+  </g>
+</svg>

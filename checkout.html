@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Aether Storefront</title>
+  <meta name="description" content="Secure checkout for Aether Goods.">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main id="site-content">
+    <div class="page-header">
+      <span class="terminal-badge">Aether GOODS // CHECKOUT</span>
+      <h1 class="page-title">Checkout</h1>
+      <p class="page-lead">Shipping intelligence followed by simulated payment authorization.</p>
+    </div>
+    <div class="container">
+      <div class="checkout-layout">
+        <div>
+          <div class="panel">
+            <div class="panel-title">01 // Shipping Information</div>
+            <div class="form-grid">
+              <div class="field">
+                <label for="ship-fullName">Full Name</label>
+                <input type="text" id="ship-fullName" autocomplete="name" />
+                <div class="field-error" id="err-fullName" style="display:none;"></div>
+              </div>
+              <div class="field">
+                <label for="ship-email">Email</label>
+                <input type="email" id="ship-email" autocomplete="email" />
+                <div class="field-error" id="err-email" style="display:none;"></div>
+              </div>
+              <div class="field full">
+                <label for="ship-address">Street Address</label>
+                <input type="text" id="ship-address" autocomplete="street-address" />
+                <div class="field-error" id="err-address" style="display:none;"></div>
+              </div>
+              <div class="field">
+                <label for="ship-city">City</label>
+                <input type="text" id="ship-city" autocomplete="address-level2" />
+                <div class="field-error" id="err-city" style="display:none;"></div>
+              </div>
+              <div class="field">
+                <label for="ship-state">State / Region</label>
+                <input type="text" id="ship-state" autocomplete="address-level1" />
+                <div class="field-error" id="err-state" style="display:none;"></div>
+              </div>
+              <div class="field">
+                <label for="ship-zip">ZIP / Postal Code</label>
+                <input type="text" id="ship-zip" autocomplete="postal-code" />
+                <div class="field-error" id="err-zip" style="display:none;"></div>
+              </div>
+              <div class="field">
+                <label for="ship-country">Country</label>
+                <select id="ship-country">
+                  <option value="">Select</option>
+                  <option value="India">India</option>
+                  <option value="United States">United States</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Japan">Japan</option>
+                  <option value="United Kingdom">United Kingdom</option>
+                  <option value="France">France</option>
+                  <option value="Australia">Australia</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Brazil">Brazil</option>
+                  <option value="Others">Others</option>
+                </select>
+                <div class="field-error" id="err-country" style="display:none;"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title">02 // Payment Authorization (Simulated)</div>
+            <div class="alert alert-info">
+              <div class="alert-title">SIMULATED GATEWAY</div>
+              <div>This storefront uses a pseudo payment flow. No real charge occurs. Test approvals: card <strong>4242 4242 4242 4242</strong>; test declines: <strong>4000 0000 0000 0002</strong>.</div>
+            </div>
+            <div class="pay-method-tabs">
+              <div class="pay-tab active">Aether Card</div>
+              <div class="pay-tab">Aether Wallet</div>
+              <div class="pay-tab">Aether Credit</div>
+            </div>
+            <form id="pay-form" novalidate>
+              <div class="field" style="margin-bottom:14px;">
+                <label for="pay-cardName">Name on Card</label>
+                <input type="text" id="pay-cardName" autocomplete="cc-name" />
+                <div class="field-error" id="err-cardName" style="display:none;"></div>
+              </div>
+              <div class="field" style="margin-bottom:14px;">
+                <label for="pay-cardNumber">Card Number</label>
+                <input type="text" id="pay-cardNumber" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" />
+                <div class="field-hint" id="err-cardNumber" style="display:none;"></div>
+              </div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="pay-expiry">Expiry (MM/YY)</label>
+                  <input type="text" id="pay-expiry" inputmode="numeric" placeholder="MM/YY" />
+                  <div class="field-error" id="err-expiry" style="display:none;"></div>
+                </div>
+                <div class="field">
+                  <label for="pay-cvv">CVV</label>
+                  <input type="password" id="pay-cvv" inputmode="numeric" placeholder="•••" />
+                  <div class="field-error" id="err-cvv" style="display:none;"></div>
+                </div>
+              </div>
+              <button type="submit" id="pay-button" class="btn btn-primary btn-block btn-lg">Pay Now</button>
+            </form>
+          </div>
+        </div>
+        <div>
+          <div id="checkout-content"></div>
+          <div id="processing-box" class="processing" style="display:none;">
+            <span class="spinner"></span>
+            <span>Authorizing Payment</span>
+          </div>
+          <div id="checkout-alert" class="alert alert-error" style="display:none;"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js?v=3"></script>
+  <script src="js/store.js?v=3"></script>
+  <script src="js/ui.js?v=3"></script>
+  <script src="js/checkout.js?v=3"></script>
+  <script>
+    window.aetherInitUI();
+    window.aetherInitCheckoutPage();
+    (function () {
+      var cardEl = document.getElementById('pay-cardNumber');
+      if (cardEl) {
+        cardEl.addEventListener('input', function (ev) {
+          cardEl.value = window.Aether.Store.formatCardNumber(cardEl.value);
+        });
+      }
+      var expEl = document.getElementById('pay-expiry');
+      if (expEl) {
+        expEl.addEventListener('input', function (ev) {
+          var digits = (ev.target.value || '').replace(/\D/g, '').substring(0, 4);
+          expEl.value = digits.length > 2 ? digits.slice(0, 2) + '/' + digits.slice(2) : digits;
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

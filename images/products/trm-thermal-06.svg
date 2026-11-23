@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f0a0a" />
+      <stop offset="50%" stop-color="#110505" />
+      <stop offset="100%" stop-color="#050202" />
+    </linearGradient>
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="germaniumLens" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="35%" stop-color="#ec4899" />
+      <stop offset="70%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="cameraBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3f3f46" />
+      <stop offset="50%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+    <filter id="shadow6" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#000" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad6)" />
+  <circle cx="400" cy="300" r="280" fill="url(#redGlow)" />
+
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+  </g>
+
+  <g filter="url(#shadow6)">
+    <!-- Pistol Grip Handle -->
+    <path d="M 330 330 L 360 480 Q 365 495 385 495 L 430 495 Q 445 495 440 480 L 415 330 Z" fill="#18181b" stroke="#ef4444" stroke-width="3" />
+    <!-- Handle Rubber Grip Inlays -->
+    <line x1="355" y1="370" x2="415" y2="370" stroke="#27272a" stroke-width="6" stroke-linecap="round" />
+    <line x1="360" y1="400" x2="420" y2="400" stroke="#27272a" stroke-width="6" stroke-linecap="round" />
+    <line x1="365" y1="430" x2="425" y2="430" stroke="#27272a" stroke-width="6" stroke-linecap="round" />
+    <line x1="370" y1="460" x2="430" y2="460" stroke="#27272a" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Trigger -->
+    <path d="M 326 335 Q 315 355 330 370" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round" />
+
+    <!-- Main Camera Body -->
+    <rect x="250" y="160" width="280" height="170" rx="14" fill="url(#cameraBody)" stroke="#71717a" stroke-width="3" />
+    <!-- Protective Orange/Red Bumper Armor Accents -->
+    <path d="M 250 174 L 250 160 L 300 160" fill="none" stroke="#ef4444" stroke-width="6" />
+    <path d="M 480 160 L 530 160 L 530 174" fill="none" stroke="#ef4444" stroke-width="6" />
+    <path d="M 250 316 L 250 330 L 300 330" fill="none" stroke="#ef4444" stroke-width="6" />
+    <path d="M 480 330 L 530 330 L 530 316" fill="none" stroke="#ef4444" stroke-width="6" />
+
+    <!-- Germanium Objective Lens Assembly (Left Facing/Prominent) -->
+    <circle cx="340" cy="245" r="54" fill="#09090b" stroke="#ef4444" stroke-width="4" />
+    <circle cx="340" cy="245" r="46" fill="url(#germaniumLens)" stroke="#f59e0b" stroke-width="2" />
+    <circle cx="340" cy="245" r="32" fill="#000000" opacity="0.4" />
+    <!-- Lens Specular Glint -->
+    <ellipse cx="328" cy="230" rx="16" ry="8" fill="#ffffff" opacity="0.4" transform="rotate(-30 328 230)" />
+
+    <!-- Display / Radiometric Crosshair Box (Right Side) -->
+    <rect x="424" y="184" width="86" height="120" rx="6" fill="#000000" stroke="#3f3f46" stroke-width="2" />
+    <!-- False-Color Heat Palette Simulated Screen -->
+    <rect x="430" y="190" width="74" height="108" fill="#18181b" />
+    <path d="M 445 270 Q 465 210 490 250" fill="none" stroke="#ef4444" stroke-width="3" />
+    <circle cx="465" cy="235" r="8" fill="#fbbf24" opacity="0.8" />
+    <!-- Reticle Crosshair -->
+    <line x1="455" y1="235" x2="475" y2="235" stroke="#ffffff" stroke-width="1.5" />
+    <line x1="465" y1="225" x2="465" y2="245" stroke="#ffffff" stroke-width="1.5" />
+    <!-- Temperature readout -->
+    <text x="467" y="210" font-family="monospace" font-size="9" fill="#ef4444" font-weight="bold" text-anchor="middle">38.4°C</text>
+    <text x="467" y="285" font-family="monospace" font-size="8" fill="#38bdf8" text-anchor="middle">NETD&lt;30mK</text>
+  </g>
+
+  <!-- Technical Spec Labels -->
+  <g font-family="monospace" font-size="11" fill="#71717a" letter-spacing="1.5">
+    <text x="40" y="550">AETHER // DEF-006</text>
+    <text x="40" y="570">640×512 GERMANIUM &#183; RADIOMETRIC</text>
+    <text x="610" y="550" text-anchor="end">SENTINEL THERMAL</text>
+    <text x="610" y="570" text-anchor="end" fill="#ef4444">PERIMETER &#183; ANOMALY INSPECTION</text>
+  </g>
+</svg>

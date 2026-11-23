@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1206" />
+      <stop offset="50%" stop-color="#0e0802" />
+      <stop offset="100%" stop-color="#050301" />
+    </linearGradient>
+    <radialGradient id="lampGlow" cx="420" cy="240" r="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.45" />
+      <stop offset="40%" stop-color="#d97706" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="aluminum" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#64748b" />
+      <stop offset="50%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#000" flood-opacity="0.75" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="600" fill="url(#bgGrad4)" />
+  <circle cx="420" cy="240" r="320" fill="url(#lampGlow)" />
+
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+  </g>
+
+  <!-- Downward Light Cone -->
+  <polygon points="260,208 620,208 720,500 160,500" fill="url(#lampGlow)" opacity="0.5" />
+
+  <g filter="url(#shadow4)">
+    <!-- Base Plate -->
+    <ellipse cx="260" cy="460" rx="90" ry="24" fill="url(#aluminum)" stroke="#64748b" stroke-width="2" />
+    <ellipse cx="260" cy="456" rx="84" ry="20" fill="#0f172a" stroke="#334155" stroke-width="1" />
+    <!-- Touch sensor dots on base -->
+    <circle cx="230" cy="456" r="3" fill="#f59e0b" />
+    <circle cx="250" cy="456" r="3" fill="#cbd5e1" opacity="0.6" />
+    <circle cx="270" cy="456" r="3" fill="#cbd5e1" opacity="0.6" />
+    <circle cx="290" cy="456" r="3" fill="#cbd5e1" opacity="0.6" />
+
+    <!-- Vertical Stem -->
+    <path d="M 254 456 L 254 200" stroke="url(#aluminum)" stroke-width="12" stroke-linecap="round" />
+    <path d="M 254 456 L 254 200" stroke="#0f172a" stroke-width="6" stroke-linecap="round" />
+
+    <!-- Articulated Joint / Pivot Elbow -->
+    <circle cx="254" cy="200" r="14" fill="url(#aluminum)" stroke="#94a3b8" stroke-width="2" />
+    <circle cx="254" cy="200" r="6" fill="#0f172a" />
+
+    <!-- Horizontal Cantilever Light Bar -->
+    <path d="M 254 200 L 640 200" stroke="url(#aluminum)" stroke-width="14" stroke-linecap="round" />
+    <!-- Recessed LED Array Emitter strip -->
+    <rect x="270" y="204" width="360" height="8" rx="3" fill="#ffffff" stroke="#f59e0b" stroke-width="1" />
+    <!-- Individual LED emitters glow points -->
+    <g fill="#fef08a" opacity="0.9">
+      <circle cx="290" cy="208" r="2.5" />
+      <circle cx="320" cy="208" r="2.5" />
+      <circle cx="350" cy="208" r="2.5" />
+      <circle cx="380" cy="208" r="2.5" />
+      <circle cx="410" cy="208" r="2.5" />
+      <circle cx="440" cy="208" r="2.5" />
+      <circle cx="470" cy="208" r="2.5" />
+      <circle cx="500" cy="208" r="2.5" />
+      <circle cx="530" cy="208" r="2.5" />
+      <circle cx="560" cy="208" r="2.5" />
+      <circle cx="590" cy="208" r="2.5" />
+      <circle cx="620" cy="208" r="2.5" />
+    </g>
+  </g>
+
+  <!-- Technical Spec Labels -->
+  <g font-family="monospace" font-size="11" fill="#94a3b8" letter-spacing="1.5">
+    <text x="40" y="550">AETHER // HOM-004</text>
+    <text x="40" y="570">CIRCADIAN-TUNED &#183; 2700K–6000K</text>
+    <text x="610" y="550" text-anchor="end">LUMEN DESK ARRAY</text>
+    <text x="610" y="570" text-anchor="end" fill="#f59e0b">DUAL CHANNEL &#183; 18W USB-C</text>
+  </g>
+</svg>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Collection | Aether Storefront</title>
+  <meta name="description" content="The Aether Goods catalog — audio, wearables, computing, home office, fitness, and defense instruments.">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main id="site-content">
+    <div class="page-header">
+      <span class="terminal-badge">Aether GOODS // CATALOG</span>
+      <h1 class="page-title">The Collection</h1>
+      <p class="page-lead">Six instrument families. Verified performance. Aether build.</p>
+    </div>
+    <div class="container">
+      <div class="shop-toolbar">
+        <div class="category-filters" id="category-filters">
+          <button class="chip active" data-cat="All">All</button>
+          <button class="chip" data-cat="Audio">Audio</button>
+          <button class="chip" data-cat="Wearables">Wearables</button>
+          <button class="chip" data-cat="Computing">Computing</button>
+          <button class="chip" data-cat="Home Office">Home Office</button>
+          <button class="chip" data-cat="Fitness">Fitness</button>
+          <button class="chip" data-cat="Defense Systems">Defense Systems</button>
+        </div>
+        <select class="sort-select" id="sort-select">
+          <option value="featured">Sort: Featured</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="rating">Top Rated</option>
+          <option value="name">Name A-Z</option>
+        </select>
+      </div>
+      <div class="grid-products" id="shop-grid"></div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js?v=3"></script>
+  <script src="js/store.js?v=3"></script>
+  <script src="js/ui.js?v=3"></script>
+  <script src="js/shop.js?v=3"></script>
+  <script>
+    window.aetherInitUI();
+    window.aetherInitShop();
+  </script>
+</body>
+</html>

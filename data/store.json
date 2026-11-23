@@ -1,0 +1,45 @@
+{
+  "cart": {
+    "items": [],
+    "promo": null
+  },
+  "orders": [
+    {
+      "createdAt": "2026-11-23T05:06:53Z",
+      "discount": 0.0,
+      "id": "Aether-18ea944232a5f9a4",
+      "items": [
+        {
+          "id": "trm-pulsewatch-02",
+          "name": "Pulse Sentinel Watch",
+          "price": 329.0,
+          "qty": 1
+        },
+        {
+          "id": "trm-lumen-04",
+          "name": "Lumen Desk Array",
+          "price": 89.0,
+          "qty": 1
+        }
+      ],
+      "payment": {
+        "approved": true,
+        "brand": "Visa",
+        "last4": "4242"
+      },
+      "shipping": 0.0,
+      "shippingAddress": {
+        "address": "Pabia Mandal tola",
+        "city": "JAMTARA",
+        "country": "India",
+        "email": "at3506671@gmail.com",
+        "fullName": "Anurag Tewary",
+        "state": "Jharkhand",
+        "zip": "815351"
+      },
+      "subtotal": 418.0,
+      "tax": 33.44,
+      "total": 451.44
+    }
+  ]
+}

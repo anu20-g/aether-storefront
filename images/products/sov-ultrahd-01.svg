@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1128" />
+      <stop offset="50%" stop-color="#060913" />
+      <stop offset="100%" stop-color="#020408" />
+    </linearGradient>
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1e88e5" stop-opacity="0.35" />
+      <stop offset="100%" stop-color="#0d47a1" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="metalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#374151" />
+      <stop offset="50%" stop-color="#1f2937" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+    <linearGradient id="titanium" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9ca3af" />
+      <stop offset="50%" stop-color="#4b5563" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff" />
+      <stop offset="100%" stop-color="#0091ea" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000" flood-opacity="0.7" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)" />
+  <circle cx="400" cy="300" r="260" fill="url(#blueGlow)" />
+
+  <!-- Tech Grid Overlay -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="600" />
+    <line x1="200" y1="0" x2="200" y2="600" />
+    <line x1="300" y1="0" x2="300" y2="600" />
+    <line x1="400" y1="0" x2="400" y2="600" />
+    <line x1="500" y1="0" x2="500" y2="600" />
+    <line x1="600" y1="0" x2="600" y2="600" />
+    <line x1="700" y1="0" x2="700" y2="600" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="450" x2="800" y2="450" />
+  </g>
+
+  <!-- Headset Art -->
+  <g filter="url(#shadow)">
+    <!-- Headband Outer Arc -->
+    <path d="M 230 330 C 210 130, 590 130, 570 330" fill="none" stroke="url(#titanium)" stroke-width="24" stroke-linecap="round" />
+    <!-- Headband Inner Cushion Strip -->
+    <path d="M 260 270 C 270 160, 530 160, 540 270" fill="none" stroke="#111827" stroke-width="16" stroke-linecap="round" />
+    <path d="M 280 240 C 310 170, 490 170, 520 240" fill="none" stroke="#1f2937" stroke-width="8" stroke-dasharray="14 6" />
+
+    <!-- Telescoping Arms & Ticks -->
+    <rect x="218" y="270" width="16" height="54" rx="4" fill="url(#titanium)" />
+    <line x1="222" y1="280" x2="230" y2="280" stroke="#00e5ff" stroke-width="2" />
+    <line x1="222" y1="290" x2="228" y2="290" stroke="#9ca3af" stroke-width="1.5" />
+    <line x1="222" y1="300" x2="228" y2="300" stroke="#9ca3af" stroke-width="1.5" />
+    <line x1="222" y1="310" x2="228" y2="310" stroke="#9ca3af" stroke-width="1.5" />
+
+    <rect x="566" y="270" width="16" height="54" rx="4" fill="url(#titanium)" />
+    <line x1="570" y1="280" x2="578" y2="280" stroke="#00e5ff" stroke-width="2" />
+    <line x1="572" y1="290" x2="578" y2="290" stroke="#9ca3af" stroke-width="1.5" />
+    <line x1="572" y1="300" x2="578" y2="300" stroke="#9ca3af" stroke-width="1.5" />
+    <line x1="572" y1="310" x2="578" y2="310" stroke="#9ca3af" stroke-width="1.5" />
+
+    <!-- Left Gimbal Fork -->
+    <path d="M 226 320 C 180 340, 180 430, 226 440" fill="none" stroke="url(#titanium)" stroke-width="10" stroke-linecap="round" />
+    <!-- Right Gimbal Fork -->
+    <path d="M 574 320 C 620 340, 620 430, 574 440" fill="none" stroke="url(#titanium)" stroke-width="10" stroke-linecap="round" />
+
+    <!-- Left Earcup Cushion (Angled) -->
+    <ellipse cx="230" cy="380" rx="34" ry="76" fill="#0d1117" stroke="#1f2937" stroke-width="6" transform="rotate(-6 230 380)" />
+    <!-- Left Earcup Body -->
+    <ellipse cx="236" cy="380" rx="28" ry="68" fill="url(#metalDark)" stroke="#374151" stroke-width="3" transform="rotate(-6 236 380)" />
+    <!-- Left Earcup Center Cap -->
+    <ellipse cx="238" cy="380" rx="16" ry="42" fill="#111827" stroke="url(#accentCyan)" stroke-width="2" filter="url(#glow)" transform="rotate(-6 238 380)" />
+
+    <!-- Right Earcup Cushion (Angled) -->
+    <ellipse cx="570" cy="380" rx="34" ry="76" fill="#0d1117" stroke="#1f2937" stroke-width="6" transform="rotate(6 570 380)" />
+    <!-- Right Earcup Body -->
+    <ellipse cx="564" cy="380" rx="28" ry="68" fill="url(#metalDark)" stroke="#374151" stroke-width="3" transform="rotate(6 564 380)" />
+    <!-- Right Earcup Center Cap -->
+    <ellipse cx="562" cy="380" rx="16" ry="42" fill="#111827" stroke="url(#accentCyan)" stroke-width="2" filter="url(#glow)" transform="rotate(6 562 380)" />
+
+    <!-- Acoustic Wave / Specular Accents -->
+    <path d="M 370 470 Q 400 480 430 470" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.6" />
+    <path d="M 350 490 Q 400 505 450 490" stroke="#00e5ff" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.4" />
+    <path d="M 330 510 Q 400 530 470 510" stroke="#00e5ff" stroke-width="1" stroke-linecap="round" fill="none" opacity="0.2" />
+  </g>
+
+  <!-- Technical Spec Labels -->
+  <g font-family="monospace" font-size="11" fill="#64748b" letter-spacing="1.5">
+    <text x="40" y="550">AETHER // AUD-001</text>
+    <text x="40" y="570">GRAPHENE 40MM &#183; DUAL-MODE ANC</text>
+    <text x="610" y="550" text-anchor="end">CLOSED-BACK REFERENCE</text>
+    <text x="610" y="570" text-anchor="end" fill="#00e5ff">CALIBRATED 2026</text>
+  </g>
+</svg>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aether Storefront | Aether Goods</title>
+  <meta name="description" content="Aether Goods — empirical hardware, engineered instruments, and verified performance from the Aether Storefront.">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+
+  <div id="site-header"></div>
+
+  <main id="site-content">
+    <section class="hero-section">
+      <span class="terminal-badge">Aether GOODS // EST. 2026</span>
+      <h1 class="hero-title">Empirical Hardware. Engineered Instruments. Verified Performance.</h1>
+      <p class="hero-lead">
+        The Aether storefront carries reference transducers, field telemetry rigs, and mission-grade compute — instruments built for field deployment, outdoor telemetry, and immersive monitoring rooms.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="products.html">Browse the Collection</a>
+        <a class="btn btn-outline btn-lg" href="#principles">Core Principles</a>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="block-header">
+        <span class="section-num">01</span>
+        <h2>Featured Instruments</h2>
+      </div>
+      <p class="section-intro">Flagship Aether hardware from the Aether product line.</p>
+      <div class="grid-products" id="featured-grid"></div>
+    </section>
+
+    <section class="content-block" id="principles">
+      <div class="block-header">
+        <span class="section-num">02</span>
+        <h2>Core Principles</h2>
+      </div>
+      <div class="grid-4">
+        <div class="feature-cell reveal">
+          <div class="feature-label">PRINCIPLE 01</div>
+          <div class="feature-title">Zero Simulation</div>
+          <div class="feature-text">No simulated benchmarks, placeholder datasets, or synthetic telemetry. Every instrument ships with empirically verified grounding.</div>
+        </div>
+        <div class="feature-cell reveal">
+          <div class="feature-label">PRINCIPLE 02</div>
+          <div class="feature-title">Aether Custody</div>
+          <div class="feature-text">Core instrumentation, firmware, and signal pipelines remain under Aether custody via the corporate parent.</div>
+        </div>
+        <div class="feature-cell reveal">
+          <div class="feature-label">PRINCIPLE 03</div>
+          <div class="feature-title">Rigorous Validation</div>
+          <div class="feature-text">Every performance claim is anchored to real-hardware execution or rigorous mathematical derivation.</div>
+        </div>
+        <div class="feature-cell reveal">
+          <div class="feature-label">PRINCIPLE 04</div>
+          <div class="feature-title">Real Hardware</div>
+          <div class="feature-text">No synthetic data enters any pipeline. Instruments are exercised on physical systems before release.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="block-header">
+        <span class="section-num">03</span>
+        <h2>The Collection</h2>
+      </div>
+      <p class="section-intro">Six instrument families spanning audio, wearables, compute, home, fitness, and defense systems.</p>
+      <div class="grid-4">
+        <a class="feature-cell reveal" href="products.html?cat=Audio">
+          <div class="feature-label">FAMILY 01</div>
+          <div class="feature-title">Audio</div>
+          <div class="feature-text">Reference transducers and field-portable speakers for monitoring-grade fidelity.</div>
+        </a>
+        <a class="feature-cell reveal" href="products.html?cat=Wearables">
+          <div class="feature-label">FAMILY 02</div>
+          <div class="feature-title">Wearables</div>
+          <div class="feature-text">Aether biometric telemetry for extreme-environment deployment.</div>
+        </a>
+        <a class="feature-cell reveal" href="products.html?cat=Computing">
+          <div class="feature-label">FAMILY 03</div>
+          <div class="feature-title">Computing</div>
+          <div class="feature-text">Mission-grade mechanical compute platforms and desk instrumentation.</div>
+        </a>
+        <a class="feature-cell reveal" href="products.html?cat=Defense Systems">
+          <div class="feature-label">FAMILY 04</div>
+          <div class="feature-title">Defense Systems</div>
+          <div class="feature-text">Radiometric sensing and field inspection instrumentation for secure operations.</div>
+        </a>
+        <a class="feature-cell reveal" href="products.html?cat=Home Office">
+          <div class="feature-label">FAMILY 05</div>
+          <div class="feature-title">Home Office</div>
+          <div class="feature-text">Circadian-tuned illumination and deep-work environment tooling.</div>
+        </a>
+        <a class="feature-cell reveal" href="products.html?cat=Fitness">
+          <div class="feature-label">FAMILY 06</div>
+          <div class="feature-title">Fitness</div>
+          <div class="feature-text">Recovery and training instrumentation engineered for repeated high-intensity load.</div>
+        </a>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="block-header">
+        <span class="section-num">04</span>
+        <h2>Live Launch Notices</h2>
+      </div>
+      <div class="newsletter-box">
+        <div class="feature-title" style="font-size:16px;font-weight:800;margin-bottom:6px;">Get updates on launches, exclusive deals, and style inspiration.</div>
+        <p class="section-intro" style="margin-bottom:0;">Subscribed instruments ship exclusively through Aether logistics.</p>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="you@institution.org" autocomplete="email" />
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="js/data.js?v=3"></script>
+  <script src="js/store.js?v=3"></script>
+  <script src="js/ui.js?v=3"></script>
+  <script src="js/shop.js?v=3"></script>
+  <script>
+    window.aetherInitUI();
+    window.aetherInitStorefront();
+  </script>
+</body>
+</html>
