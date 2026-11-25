@@ -2,6 +2,8 @@
 
 Official e-commerce storefront for Aether Goods. Built on the storefront's high-contrast "scientific terminal" design language.
 
+**Live Deployment**: [https://anu20-g.github.io/aether-storefront/](https://anu20-g.github.io/aether-storefront/)
+
 ## Pages
 
 - `index.html` — Storefront overview, featured instruments, core principles, collection families, newsletter
